@@ -19,15 +19,13 @@ public class itemController {
     private final ItemServiceImpl itemService;
 
     @PostMapping
-    public ResponseEntity<Item> addLostItem(@RequestBody Item item) {
-        Item items = itemService.lostItem(item);
-        return ResponseEntity.status(HttpStatus.OK).body(items);
+    public Item lostItem(@RequestBody Item item) {
+        return itemService.lostItem(item);
     }
 
     @PostMapping("/found-item")
-    public ResponseEntity<Item> foundItem(@RequestBody Item item) {
-        Item items = itemService.foundItem(item);
-        return ResponseEntity.status(HttpStatus.FOUND).body(items);
+    public Item foundItem(@RequestBody Item item) {
+        return itemService.foundItem(item);
     }
 
     @GetMapping

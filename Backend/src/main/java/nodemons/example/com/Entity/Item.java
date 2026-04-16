@@ -1,5 +1,6 @@
 package nodemons.example.com.Entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
@@ -18,7 +19,7 @@ public class Item {
     private String item_name;
     private String item_description;
     private String location;
-    private LocalDateTime event_date;
+    private LocalDate event_date;
     private String item_status;
 
 }
