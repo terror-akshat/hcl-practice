@@ -20,7 +20,5 @@ public class Item {
     private String location;
     private LocalDateTime event_date;
     private String item_status;
-    
 
-    
 }
