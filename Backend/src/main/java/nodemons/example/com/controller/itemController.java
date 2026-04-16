@@ -31,9 +31,8 @@ public class itemController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Item> getAllItems(@RequestBody Item item) {
-        List<Item> items = itemService.getAllItem();
-        return ResponseEntity.status(HttpStatus.FOUND).body(Collections.singletonList((Item) items));
+    public List<Item> getAllItems() {
+        return itemService.getAllItem();
     }
 
     @GetMapping("/claim-item")
